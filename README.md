@@ -11,7 +11,6 @@ This repository documents my journey of solving problems on Codeforces and impro
 * Master Data Structures & Algorithms (DSA)
 * Learn advanced competitive programming techniques
 * Increase my Codeforces rating over time
-* Build strong problem-solving habits
 
 ## 📂 Repository Structure
 
