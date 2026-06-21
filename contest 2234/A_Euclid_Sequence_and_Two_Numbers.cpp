@@ -21,26 +21,30 @@ int main()
         sort(n.begin(), n.end());
         reverse(n.begin(), n.end());
 
-        for (int i = 0; i < l - 1; i++)
+        if (l == 2)
         {
-            if (n[i] % n[i + 1] == 0 && (l == 2))
+            cout << n[0] << " " << n[1] << endl;
+            continue;
+        }
+
+        bool flag = true;
+        for (int i = 0; i < l - 2; i++)
+        {
+            if (n[i] % n[i + 1] != n[i + 2])
             {
-                cout << n[i] << " " << n[i + 1];
-                break;
-            }
-            else if (n[i] % n[i + 1] == n[i + 2] && (l >= 3))
-            {
-                cout << n[i] << " " << n[i + 1];
-                break;
-            }
-            else
-            {
-                cout << -1;
+                flag = false;
                 break;
             }
         }
 
-        cout << endl;
+        if (flag)
+        {
+            cout << n[0] << " " << n[1] << endl;
+        }
+        else
+        {
+            cout << -1 << endl;
+        }
     }
 
     return 0;
